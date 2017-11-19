@@ -6,3 +6,7 @@ h1.bg-headers:only-of-type {
 	background-color: #ccc;
 	color: #000;
 }
+h2.bg-headers {
+	margin: 15px;
+	color: gold;
+}

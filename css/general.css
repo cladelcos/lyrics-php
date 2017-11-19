@@ -1,0 +1,8 @@
+.body-content:only-of-type {
+	color: #fff;
+	width: 98.6%;
+}
+h1.bg-headers:only-of-type {
+	background-color: #ccc;
+	color: #000;
+}

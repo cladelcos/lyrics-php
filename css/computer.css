@@ -7,10 +7,6 @@
 		padding: 25px 10px;
 		z-index: 2; /*Position of div back of menubar*/
 	}
-	.body-content h1, .body-content button, 
-	input {
-		color: #000;
-	}
 	.body-content, .hide-unhide, 
 	.left-screen, nav {
 		display: inline-block;
@@ -49,6 +45,10 @@
 	}
 	.fixed-content {
 		position: fixed;
+	}
+	.body-content h1 {
+		background: #ccc;
+		margin: 5px auto;
 	}
 	.hide {
 		display: none;

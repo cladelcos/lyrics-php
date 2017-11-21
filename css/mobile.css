@@ -46,6 +46,10 @@
 	.fixed-content {
 		position: fixed;
 	}
+	.body-content h1 {
+		background: #ccc;
+		margin: 5px auto;
+	}
 	.hide {
 		display: none;
 	}

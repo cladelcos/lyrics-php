@@ -1,6 +1,7 @@
 @media only screen and (min-width: 650px) and (max-width: 2500px) {
 	.body-content {
-		background: url("../data/image/background/piano.jpg");
+		/*background: url("../data/image/background/piano.jpg");*/
+		background-color: gold;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		margin: 40px 0px 0px 0px; 
@@ -10,6 +11,9 @@
 	.body-content, .hide-unhide, 
 	.left-screen, nav {
 		display: inline-block;
+	}
+	button a {
+		color: #000;
 	}
 	.center {
 		text-align: center;
@@ -185,6 +189,9 @@
 		width: 82.4%;
 		height: 100%;
 		margin-left: 250px; 
+	}
+	p {
+		color: #000;
 	}
 	.position-hide {
 		left: 0px;

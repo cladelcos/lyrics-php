@@ -1,0 +1,8 @@
+CREATE TABLE lyricsList(id int(100) UNSIGNED AUTO_INCREMENT PRIMARY KEY, band varchar(100), songName varchar(100), urlLyrics varchar(100), genre varchar(100), cover varchar(100))
+
+
+
+INSERT INTO lyrics_list(band,songName,urlLyrics, genre, coverAbbrNameBand, coverAbbrNameAlbum) VALUES("Linkin Park feat. Busta Rhymes","We Made It", "https://genius.com/Busta-rhymes-we-made-it-lyrics", "Numetal", "lp", "brwmi")
+
+INSERT INTO lyrics_list(band,songName,urlLyrics, genre, coverAbbrNameBand, coverAbbrNameAlbum) VALUES("Linkin Park","Blackbirds", "https://www.azlyrics.com/lyrics/linkinpark/blackbirds.html", "Numetal", "lp", "blackbirds")
+

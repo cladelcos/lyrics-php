@@ -1,28 +1,24 @@
-var doc = document;
-var shapesDoc = doc.getElementById("shapes-js");
-var shapesStyle = doc.getElementById("shapes-js").style;
-var userData = doc.getElementById("userDataField");
+// JQuery 
 
-shapesStyle.background = "Black";
-shapesStyle.color = "Green";
-shapesStyle.textAlign = "Center";
+$("a.delete").click(function () {
+	var id = $(this).attr("id");
+	var data = 'id = ' + id;
+	var parent = $(this).parent();
 
+	var $meu_alerta = $('#confirm-delete');
 
+	$meu_alerta.modal().find(".btn-ok").on("click", function () {
+		$.ajax({
+			type: "POST",
+			url: "../sql/remove-data.php",
+			data: data,
+			cache: false, 
 
+			success: function () {
+				parent.fadeOut('slow', function(){ $(this).remove();});
+				window.location.reload();
+			}
+		})
+	})
 
-// Angular Edit
-
-var appAnim = angular.module("app",["ngAnimate"]);
-
-var app = angular.module("app",[]);
-
-app.controller("nameMatrix", function($scope) {
-	$scope.firstName = "Chester";
-	$scope.lastName = "Bennington";
-});
-
-app.directive("angle", function () {
-	return {
-		template: "I was made in a directive constructor."
-	};
-});
+})

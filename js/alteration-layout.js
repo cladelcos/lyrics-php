@@ -21,18 +21,6 @@ function alter() {
 	}
 }
 
-// while (document.getElementsByTagName('body').style.minWidth = 500 + "px" == true)
-
-// tests
-function addClassTest() {
-	// $(".left-screen").removeClass("hide");
-	// $(".left-screen").addClass("unhide");
-	// console.log("class Hide: " + $(".left-screen").hasClass("hide"));
-	// console.log("class Unhide: " + $(".left-screen").hasClass("unhide"));
-	// console.log("Value: " + ($(".left-screen").hasClass("hide") == false));
-	// console.log("Value: " + ($(".left-screen").hasClass("unhide") == true));
-
-}
 function removeClassTest() {
 	$(".left-screen").removeClass("unhide");
 	$(".left-screen").addClass("hide");

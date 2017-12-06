@@ -1,15 +1,11 @@
 form {
 	display: block;
 	float: left;
-	color: #fff;
 }
 form p {
 	margin: 5px 0px;
 	text-align: right;
 
-}
-h1 {
-	color: black;
 }
 input {
 	color: black; 

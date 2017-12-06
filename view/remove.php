@@ -16,6 +16,9 @@
     </style>
 </head>
 <body>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../js/test.js"></script>
+
 	<div class="page-screen">
         <nav>
             <ul>
@@ -26,7 +29,7 @@
             <?php error_reporting(0); ?>
 
             <?php include "../sql/database.php"; ?>
-			<?php include "../php-validation/cover.php"; ?>
+            
 
             <div class="body-content left-align max center">
                 <?php
@@ -35,13 +38,13 @@
                         // inicia o loop que vai mostrar todos os dados
                         do {
                 ?>
-                <form action="../sql/remove-data.php" method="POST">
-                    <p>
-                        <?= $linha['band']?> || <?= $linha['songName']?> || <?= $linha['urlLyrics']?> ||  <?= $linha['genre']?>
-                        <input type="submit" value="Remove">
-                    </p>
-                </form>
-
+                
+                <p>
+                    <?= $linha['id']?> || <?= $linha['band']?> || <?= $linha['songName']?> || <?= $linha['urlLyrics']?> ||  <?= $linha['genre']?>
+                    <?php $identifier = $linha['id']; ?>
+                    <a href="../sql/remove-data.php?id=<?=$identifier?>">REMOVE</a>
+                </p>
+                
                 <?php
                         // finaliza o loop que vai mostrar os dados
                         }while($linha = mysql_fetch_assoc($dados));

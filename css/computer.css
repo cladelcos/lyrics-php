@@ -1,6 +1,6 @@
 @media only screen and (min-width: 650px) and (max-width: 2500px) {
 	.body-content {
-		/*background: url("../data/image/background/piano.jpg");*/
+		background: url("../data/image/background/piano.jpg");
 		background-color: gold;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
@@ -189,9 +189,6 @@
 		width: 82.4%;
 		height: 100%;
 		margin-left: 250px; 
-	}
-	p {
-		color: #000;
 	}
 	.position-hide {
 		left: 0px;

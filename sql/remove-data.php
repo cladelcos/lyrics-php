@@ -1,26 +1,14 @@
-<?php include '../sql/database.php'; ?>
 <?php 
 	// definições de host, database, usuário e senha
-	$host = "localhost";
-	$db   = "lyrics";
-	$user = "root";
-	$pass = "root";
-	// conecta ao banco de dados
-	$con = mysql_pconnect($host, $user, $pass) or trigger_error(mysqli_error(),E_USER_ERROR); 
-	// seleciona a base de dados em que vamos trabalhar
-	mysql_select_db($db, $con);
 
-	$band = $songName = $urlLyrics = $genre = $abbrBandName = $abbrBandAlbum =  "";
+	if($_GET['id'] != 0) {
+		include '../sql/database.php'; 
 
-	if(isset($_GET['band'])){
-		$band=$_GET['band'];
-		$songName=$_GET['songName'];
-		$urlLyrics=$_GET['urlLyrics'];
-		$genre=$_GET['genre'];
-		$abbrBandName=$_GET['abbrBandName'];
-		$abbrBandAlbum=$_GET['abbrBandAlbum'];
+		$id = "";
+
+		$id = $_GET['id'];
 		
-		$query = "INSERT INTO lyrics_list SET band = '$band', songName = '$songName', urlLyrics = '$urlLyrics', genre = '$genre', coverAbbrNameBand = '$abbrBandName', coverAbbrNameAlbum = '$abbrBandAlbum'";
+		$query = "DELETE FROM lyrics_list WHERE id = '$id'";
 		// mysql_query($sql,$con);
 
 		// executa a query
@@ -30,13 +18,8 @@
 		// calcula quantos dados retornaram
 		$total = mysql_num_rows($dados);
 	}
-	else
-	{
+	else {
+		echo '<h1>Dado nao Removido</h1>';
 	}
-	// Check connection
-	// if($submit === false){
-	    // die("ERROR: Could not connect. " . mysqli_connect_error());
-	// }
-	 
 
 ?>

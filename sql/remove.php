@@ -1,4 +1,6 @@
 <?php 
+	error_reporting(0);
+
 	// definições de host, database, usuário e senha
 
 	if($_GET['id'] != 0) {
@@ -23,3 +25,20 @@
 	}
 
 ?>
+<head>
+     <?php 
+        $nameTitle = "Remove Song";
+        include '../paths/styles-page.php'; 
+    ?>
+</head>
+<body>
+    <div class="page-screen">
+        <?php include "../paths/nav-private-index.php"; ?>
+        <div class="body-content left-align max center">
+            <h1>Data removed</h1>
+
+            <?php include "../paths/buttons.php"; ?>
+        </div>
+    </div>
+</body>
+</html>

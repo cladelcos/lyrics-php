@@ -1,5 +1,6 @@
 <?php
 	function cover($band, $album) {
+
 		if ($band == "lp") {
 			$band = "linkin-park-";
 			if($album == "brwmi") {
@@ -45,7 +46,7 @@
 				$band .= "the-rising-tied.png";
 			}
 		}
-		if ($band == "na") {
+		if ($band == "" || $album == "") {
 			$band = "na.png";
 		}
 		return $band;

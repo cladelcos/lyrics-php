@@ -15,7 +15,7 @@
         <?php error_reporting(0); ?>
 
         <div class="body-content left-align max center">
-            <?php include "../sql/database.php"; ?>
+            <?php include "../sql/show-data.php"; ?>
 
             <?php
                 // se o número de resultados for maior que zero, mostra os dados

@@ -1,11 +1,11 @@
 <?php	
+	include 'database.php'; 
 	if($_GET['name'] != "") {
-		include 'database.php'; 
 
-		$nameTable = "";
-		$nameTable = $_GET['name'];
+		$nameTitleTable = "";
+		$nameTitleTable = $_GET['name'];
 		
-		$query = "SELECT * FROM $nameTable";
+		$query = "SELECT * FROM $nameTitleTable";
 		// $query = "SELECT * FROM avenged_sevenfold";
 
 

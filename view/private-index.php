@@ -7,13 +7,16 @@
 </head>
 <body>
     <div class="page-screen">
-        <?php include "../paths/nav-private-index.php"; ?>
+        <?php 
+            include "../paths/nav-private-index.php"; 
+        ?>
         <div class="body-content left-align max center">
-            <?php error_reporting(0); ?>
+            <?php 
+            	// error_reporting(0); 
+            ?>
 
             <?php
                 include "../sql/tables.php";
-                include "../php-validation/cover.php";
             ?>
 
             <br>
@@ -32,13 +35,13 @@
 	                        if($total > 0) {
 	                            // inicia o loop que vai mostrar todos os dados
 	                            do {
-	                            	$nameTable = $linha['Tables_in_lyrics'];
+	                            	$nameTable = $linha['Tables_in_id3984030_lyrics'];
 	                    ?>
 	                    <tr>
 	                        <td>
-	                            <a href="../view/private-layout-songs.php?name=<?=$nameTable?>">
+	                            <a href="private-layout-songs.php?name=<?=$nameTable?>">
 									<?= //Name tables List Code all_tables
-										$linha['Tables_in_lyrics'];
+										$linha['Tables_in_id3984030_lyrics'];
 									?>
 	                            </a>
 	                        </td>
@@ -49,6 +52,10 @@
 							// fim do if 
 							}
 	                    ?>
+	                    <?php
+							// tira o resultado da busca da memória
+							mysql_free_result($dados);
+						?>
 					</tbody>
 				</table>
             </div>

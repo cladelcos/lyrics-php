@@ -11,8 +11,6 @@
     <div class="page-screen">
         <?php error_reporting(0); ?>
         <?php 
-            include "../paths/nav-private-index.php";
-            include "../sql/database.php";
             include "../php-validation/cover.php"; 
         ?>
            

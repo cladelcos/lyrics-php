@@ -1,5 +1,5 @@
 <nav>
     <ul>
-        <li><a href="../view/private-index.php">Lyrics</a></li>
+        <li><a href="../private-configuration.php">Lyrics</a></li>
     </ul>
 </nav>

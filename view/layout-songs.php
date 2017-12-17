@@ -8,7 +8,7 @@
 <body>
     <div class="page-screen">
         <?php 
-            include "../paths/nav-private-index.php"; 
+            include "../paths/nav-index.php"; 
         ?>
         <div class="body-content left-align max center">
             <?php error_reporting(0); ?>

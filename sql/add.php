@@ -1,7 +1,7 @@
 <?php 
 	error_reporting(0);
 	
-	include '../sql/database.php';
+	include 'database.php';
 
 	$nameTable = $band = $songName = $urlLyrics = $genre = $abbrBandName = $abbrBandAlbum =  "";
 

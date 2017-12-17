@@ -16,7 +16,7 @@
             <?php 
                 $nameTitleTable = $_GET['name'];
                 include "../php-validation/cover.php";
-                include "../sql/show-data.php";
+                include "../sql/show-data.php?name=<?=$nameTitleTable?>";
             ?>
 
             <br>

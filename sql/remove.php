@@ -3,14 +3,15 @@
 
 	// definições de host, database, usuário e senha
 
+	include 'database.php'; 
 	if($_GET['id'] != 0) {
-		include '../sql/database.php'; 
 
-		$id = "";
+		$nameTable = $id = "";
 
+		$nameTable = $_GET['name'];
 		$id = $_GET['id'];
 		
-		$query = "DELETE FROM lyrics_list WHERE id = '$id'";
+		$query = "DELETE FROM $nameTable WHERE id = '$id'";
 		// mysql_query($sql,$con);
 
 		// executa a query

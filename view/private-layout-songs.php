@@ -15,14 +15,16 @@
 
             <?php 
                 $nameTbPass = $_GET['nameTb'];
-                include "../sql/show-data.php?nameTbSqlPass=<?=$nameTbPass?>";
+                include "../sql/show-data.php?tbSqlPass=<?=$nameTbPass?>";
             ?>
 
             <br>
+            
+            <button><a href="../sql/show-data.php?tbSqlPass=<?=$nameTbPass?>">Access</a></button>
 
             <h1><?=$nameTbPass;?></h1>
 
-            <<table>
+            <table>
                 <thead>
                     <th>Band</th>
                     <th>Song Name</th>
@@ -33,9 +35,8 @@
                     <th colspan="3">Actions</th>
                 </thead>
                 <tbody>
-                    <form action="../sql/add.php" method="GET">
+                    <form action="../sql/add.php?tbSqlPass=<?=$nameTbPass?>" method="GET">
                         <tr>
-                            <td><input type="text" name="nameTbSqlPass" value="<?=$nameTbPass?>" disabled></td>
                             <td><input type="text" name="bandNameForm"></td>
                             <td><input type="text" name="songNameForm"></td>
                             <td><input type="text" name="urlLyricsForm"></td>

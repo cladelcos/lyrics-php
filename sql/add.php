@@ -3,19 +3,19 @@
 	
 	include 'database.php';
 
-	$nameTable = $band = $songName = $urlLyrics = $genre = $abbrBandName = $abbrBandAlbum =  "";
-
-	if(isset($_GET['nameTbPass'])){
-		$nameTable=$_GET['nameTbPass'];
+	$nameTbSql = "aksfljça";
+	$nameTbSql = $_GET['nameTbSqlPass'];
+	if(isset($_GET['nameTb'])){
+		$nameTb = "";
 		
-		$bandNameData =$_GET['bandName'];
-		$songName=$_GET['songName'];
-		$urlLyrics=$_GET['urlLyrics'];
-		$genre=$_GET['genre'];
-		$abbrBandName=$_GET['coverNameBand'];
-		$abbrBandAlbum=$_GET['coverNameAlbum'];
+		$bandNameData = $_GET['bandNameForm'];
+		$songName=$_GET['songNameForm'];
+		$urlLyrics=$_GET['urlLyricsForm'];
+		$genre=$_GET['genreForm'];
+		$abbrBandName=$_GET['coverNameBandForm'];
+		$abbrBandAlbum=$_GET['coverNameAlbumForm'];
 
-		$query = "INSERT INTO $nameTable SET band = $bandNameData, songName = $songName, urlLyrics = $urlLyrics, genre = $genre, coverAbbrNameBand = $abbrBandName, coverAbbrNameAlbum = $abbrBandAlbum";
+		$query = "INSERT INTO $nameTbSql SET band = $bandNameData, song_name = $song_name, url_lyrics = $urlLyrics, genre = $genre, cover_abbr_name_band = $abbrBandName, cover_abbr_name_album = $abbrBandAlbum";
 		// mysql_query($sql,$con);
 
 		// executa a query
@@ -29,15 +29,16 @@
 	$redirect = "../private-configuration.php";
 
 	// header("location:$redirect");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document <?= $nameTable ?></title>
+	<title>ADD - <?= $nameTbSql ?></title>
 </head>
 <body>
-	<h1><?php echo $nameTable ?></h1>
+	<h1> NO - <?php echo $nameTbSql ?></h1>
 	
 </body>
 </html>

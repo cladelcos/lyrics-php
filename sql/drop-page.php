@@ -1,14 +1,16 @@
 <?php 
 	error_reporting(0);
-	
-	include "database.php";
 
-	$band =  "";
+	// definições de host, database, usuário e senha
 
-	if(isset($_GET['band'])){
-		$band=$_GET['band'];
+	include 'database.php'; 
+	if(isset($_GET['nameTb'])) {
+
+		$nameTable = "";
+
+		$nameTable = $_GET['nameTb'];
 		
-		$query = "CREATE TABLE $band(id_band INT(255) UNSIGNED AUTO_INCREMENT PRIMARY KEY, band VARCHAR(100), song_name VARCHAR(255), url_lyrics VARCHAR(255), genre VARCHAR(255), cover_abbr_name_band VARCHAR(255), cover_abbr_name_album VARCHAR(255))";
+		$query = "DROP TABLE $nameTable";
 		// mysql_query($sql,$con);
 
 		// executa a query
@@ -18,8 +20,12 @@
 		// calcula quantos dados retornaram
 		$total = mysql_num_rows($dados);
 	}
+	else {
+		echo '<h1>Dado nao Removido</h1>';
+	}
 
 	$redirect = "../private-configuration.php";
 
 	header("location:$redirect");
+
 ?>

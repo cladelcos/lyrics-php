@@ -1,7 +1,8 @@
 <html lang="en">
 <head>
     <?php
-        $nameTitle = "Lyrics Around";
+        // error_reporting(0);
+        $nameTitle = "Pages Configurations";
     ?>
     <link rel="icon" href="<?= $iconURL ?>">
     <meta charset="UTF-8">
@@ -23,11 +24,48 @@
             </ul>
         </nav>
         <div class="body-content left-align max center">
-            
-            <div class="buttons">
-                <button><a href="view/private-index.php">Select Database</a></button>
-                <button><a href="view/new-band.php">New Database</a></button>
-                <button><a href="view/remove-band.php">Remove Database</a></button>
+            <?php 
+                include "sql/tables.php";
+            ?>
+
+            <br>
+
+            <h1><?=$nameTitle;?></h1>
+
+            <table>
+                <thead>
+                    <th colspan="3">Page</th>
+                </thead>
+                <tbody>
+                    <?php
+                        // se o número de resultados for maior que zero, mostra os dados
+                        if($total > 0) {
+                            // inicia o loop que vai mostrar todos os dados
+                            do {
+                                $nameTbPass = $linha['Tables_in_id3984030_lyrics'];
+                    ?>
+                    <tr>
+                        <td><a href="view/private-layout-songs.php?nameTb=<?=$nameTbPass?>"><?=$linha['Tables_in_id3984030_lyrics']?></a></td>
+                        <td><a href="sql/drop-page.php?nameTb=<?=$nameTbPass?>">Remove</a></td>
+                    </tr>
+                    <?php
+                                
+                            // finaliza o loop que vai mostrar os dados
+                            }while($linha = mysql_fetch_assoc($dados));
+                        // fim do if 
+                        }
+                    ?>
+                    <?php
+                        // tira o resultado da busca da memória
+                        mysql_free_result($dados);
+                    ?>
+                    <form action="sql/new-table.php" method="GET">
+                        <tr>
+                            <td><input type="text" name="band"></td>
+                            <td><input type="submit" value="Add"></td>
+                        </tr>
+                    </form>
+                </tbody>                
             </div>
             <br>    
 

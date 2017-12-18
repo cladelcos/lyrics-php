@@ -25,21 +25,7 @@
 		echo '<h1>Dado nao Removido</h1>';
 	}
 
-?>
-<head>
-     <?php 
-        $nameTitle = "Remove Song";
-        include '../paths/styles-page.php'; 
-    ?>
-</head>
-<body>
-    <div class="page-screen">
-        <?php include "../paths/nav-private-index.php"; ?>
-        <div class="body-content left-align max center">
-            <h1>Data removed</h1>
+	$redirect = "../private-configuration.php";
 
-            <?php include "../paths/buttons.php"; ?>
-        </div>
-    </div>
-</body>
-</html>
+	header("location:$redirect");
+?>

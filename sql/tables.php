@@ -11,4 +11,5 @@
 	$linha = mysql_fetch_assoc($dados);
 	// calcula quantos dados retornaram
 	$total = mysql_num_rows($dados);
+
 ?>

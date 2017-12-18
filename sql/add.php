@@ -5,17 +5,17 @@
 
 	$nameTable = $band = $songName = $urlLyrics = $genre = $abbrBandName = $abbrBandAlbum =  "";
 
-	if(isset($_GET['bandName'])){
-		$nameTable=$_GET['bandName'];
+	if(isset($_GET['nameTbPass'])){
+		$nameTable=$_GET['nameTbPass'];
 		
-		$bandNameData =$_GET['bandNameData'];
+		$bandNameData =$_GET['bandName'];
 		$songName=$_GET['songName'];
 		$urlLyrics=$_GET['urlLyrics'];
 		$genre=$_GET['genre'];
-		$abbrBandName=$_GET['abbrBandName'];
-		$abbrBandAlbum=$_GET['abbrBandAlbum'];
+		$abbrBandName=$_GET['coverNameBand'];
+		$abbrBandAlbum=$_GET['coverNameAlbum'];
 
-		$query = sprintf("INSERT INTO $nameTable SET band = $bandNameData, songName = $songName, urlLyrics = $urlLyrics, genre = $genre, coverAbbrNameBand = $abbrBandName, coverAbbrNameAlbum = $abbrBandAlbum");
+		$query = "INSERT INTO $nameTable SET band = $bandNameData, songName = $songName, urlLyrics = $urlLyrics, genre = $genre, coverAbbrNameBand = $abbrBandName, coverAbbrNameAlbum = $abbrBandAlbum";
 		// mysql_query($sql,$con);
 
 		// executa a query
@@ -26,22 +26,18 @@
 		$total = mysql_num_rows($dados);
 	}
 
+	$redirect = "../private-configuration.php";
+
+	// header("location:$redirect");
 ?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-     <?php 
-        $nameTitle = "Add Song";
-        include '../paths/styles-page.php'; 
-    ?>
+	<meta charset="UTF-8">
+	<title>Document <?= $nameTable ?></title>
 </head>
 <body>
-    <div class="page-screen">
-        <?php include "../paths/nav-private-index.php"; ?>
-        <div class="body-content left-align max center">
-            <h1>Insert data Successful</h1>
-
-		<!-- <h1><?= $nameTable ?></h1> -->
-            <?php include "../paths/buttons.php"; ?>
-        </div>
-    </div>
+	<h1><?php echo $nameTable ?></h1>
+	
 </body>
 </html>

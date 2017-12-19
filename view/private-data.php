@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
      <?php 
-        $nameTitle = "Layout Songs";
+        $nameTitle = "Data - Songs";
         include '../paths/styles-page.php'; 
     ?>
 </head>

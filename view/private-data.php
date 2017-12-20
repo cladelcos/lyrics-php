@@ -14,15 +14,31 @@
             <?php error_reporting(0); ?>
 
             <?php 
-                $nameTbPass = $_GET['nameTb'];
-                include "../sql/show-data.php?tbSqlPass=<?=$nameTbPass?>";
+                $tbNamePass = $GET['tbName'];
+                include "../sql/show-data.php?tbName<?=$tbNamePass?>";
+            ?>
+            <a href="../sql/show-data.php?tbNameSql<?=$tbNamePass?>">TEST</a>
+            <br>
+            <?php
+                // se o número de resultados for maior que zero, mostra os dados
+                if($total > 0) {
+                    // inicia o loop que vai mostrar todos os dados
+                    do {
+            ?>
+            <p>
+                
+                <?= 
+                    $linha['song_name']
+                ?>
+            </p>
+            
+            <?php
+                    // finaliza o loop que vai mostrar os dados
+                    } while($linha = mysql_fetch_assoc($dados));
+                // fim do if 
+                }
             ?>
 
-            <br>
-            
-            <button><a href="../sql/show-data.php?tbSqlPass=<?=$nameTbPass?>">Access</a></button>
-
-            <h1><?=$nameTbPass;?></h1>
 
             <p>Covers will being in here.</p>
         </div>

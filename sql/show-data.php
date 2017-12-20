@@ -1,9 +1,9 @@
 <?php	
 	include 'database.php'; 
 	
-	$nameTbSql = $_GET['tbSqlPass'];
+	$nameTbSql = $_GET['tbNameSql'];
 	
-	$query = "SELECT * FROM $nameTbSql";
+	$query = sprintf("SELECT * FROM $nameTbSql");
 
 	// executa a query
 	$dados = mysql_query($query, $con) or die(mysql_error());
@@ -12,7 +12,13 @@
 	// calcula quantos dados retornaram
 	$total = mysql_num_rows($dados);
 	
-	$redirect = "../view/private-layout-songs.php";
+	$redirect = "../view/private-data.php";
 
-	header("location:$redirect");
+	// header("location:$redirect");
 ?>
+
+<h2>
+	<?=
+		$nameTbSql	
+	?>
+</h2>

@@ -5,9 +5,6 @@
 
 	include 'database.php'; 
 	if(isset($_GET['nameTb'])) {
-
-		$nameTable = "";
-
 		$nameTable = $_GET['nameTb'];
 		
 		$query = "DROP TABLE $nameTable";
@@ -24,8 +21,7 @@
 		echo '<h1>Dado nao Removido</h1>';
 	}
 
-	$redirect = "../private-configuration.php";
+	$redirect = "../view/private-table.php";
 
 	header("location:$redirect");
-
 ?>

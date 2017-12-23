@@ -19,7 +19,7 @@
 		$total = mysql_num_rows($dados);
 	}
 
-	$redirect = "../private-configuration.php";
+	$redirect = "../view/private-table.php";
 
 	header("location:$redirect");
 ?>

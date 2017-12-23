@@ -11,9 +11,9 @@
 		$nameTable = $_GET['name'];
 		$id = $_GET['id'];
 		
-		$query = "DELETE FROM $nameTable WHERE id = '$id'";
-		// mysql_query($sql,$con);
 
+		$query = "DELETE FROM $nameTbSql WHERE id_band = '".$id."'";
+		
 		// executa a query
 		$dados = mysql_query($query, $con) or die(mysql_error());
 		// transforma os dados em um array
@@ -25,7 +25,7 @@
 		echo '<h1>Dado nao Removido</h1>';
 	}
 
-	$redirect = "../private-configuration.php";
+	$redirect = "../view/private-data-select-table.php";
 
 	header("location:$redirect");
 ?>

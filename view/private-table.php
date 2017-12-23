@@ -47,7 +47,7 @@
                                 ?>
                             </td>
                             <td>
-                                <a href="../sql/drop-page.php?nameTb=<?= $nametable ?>">Remove</a>
+                                <a href="../sql/drop-table.php?nameTb=<?=$nameTable?>">Remove</a>
                             </td>
                         </tr>            
                         <?php

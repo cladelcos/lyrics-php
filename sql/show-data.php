@@ -1,9 +1,9 @@
 <?php	
 	include 'database.php'; 
 	
-	$nameTbSql = $_GET['tbNameSql'];
+	$nameTbSql = $_GET['tbName'];
 	
-	$query = sprintf("SELECT * FROM $nameTbSql");
+	$query = "SELECT * FROM $nameTbSql";
 
 	// executa a query
 	$dados = mysql_query($query, $con) or die(mysql_error());
@@ -11,14 +11,4 @@
 	$linha = mysql_fetch_assoc($dados);
 	// calcula quantos dados retornaram
 	$total = mysql_num_rows($dados);
-	
-	$redirect = "../view/private-data.php";
-
-	// header("location:$redirect");
 ?>
-
-<h2>
-	<?=
-		$nameTbSql	
-	?>
-</h2>

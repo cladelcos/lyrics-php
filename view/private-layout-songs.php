@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
      <?php 
-        $nameTitle = "Layout";
+        $nameTitle = "Private Layout";
         include '../paths/styles-page.php'; 
     ?>
 </head>
@@ -23,9 +23,6 @@
 
             <h1><?=$nameTitle;?></h1>
 
-            <?php
-                include "./paths/buttons.php";
-            ?>
         </div>
     </div>
 </body>

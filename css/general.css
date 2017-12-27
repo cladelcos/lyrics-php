@@ -1,0 +1,29 @@
+.page-screen {
+	display: block;	
+	background: url("../data/image/background/piano.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% auto;
+}
+.page-screen-index {
+	display: block;	
+	background: url("data/image/background/piano.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% auto;	
+}
+form {
+	display: block;
+	float: left;
+}
+form p {
+	margin: 5px 0px;
+	text-align: right;
+
+}
+input, select, select option {
+	color: black; 
+}
+h1 {
+	color: #000;
+}

@@ -1,0 +1,6 @@
+CREATE TABLE lyricsList(id int(100) UNSIGNED AUTO_INCREMENT PRIMARY KEY, band varchar(100), songName varchar(100), urlLyrics varchar(100), genre varchar(100), cover varchar(100))
+
+
+INSERT INTO linkin_park(band,song_name,url_lyrics, genre, cover_abbr_name_band, cover_abbr_name_album) values("Linkin Park", "Blackbirds", "", "", "", "")
+
+
